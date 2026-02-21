@@ -35,6 +35,7 @@ def cudnn_redist_init_repository(
         cudnn_redist_path_prefix = CUDNN_REDIST_PATH_PREFIX,
         mirrored_tar_cudnn_redist_path_prefix = MIRRORED_TAR_CUDNN_REDIST_PATH_PREFIX,
         redist_versions_to_build_templates = REDIST_VERSIONS_TO_BUILD_TEMPLATES):
+    print("redist_versions_to_build_templates: ", redist_versions_to_build_templates)
     # buildifier: disable=function-docstring-args
     """Initializes CUDNN repository.
 
