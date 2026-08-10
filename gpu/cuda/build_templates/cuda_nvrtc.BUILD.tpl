@@ -54,7 +54,7 @@ cc_library(
     %{comment}[
         %{comment}":nvrtc_main",
         %{comment}":nvrtc_builtins",
-    %{comment}]),
+    %{comment}]) + if_cuda_newer_than("13_0", ["@cuda_nvfatbin//:nvfatbin"], []),
     %{comment}linkopts = if_cuda_newer_than(
         %{comment}"13_0",
         %{comment}if_true = cuda_rpath_flags("nvidia/cu13/lib"),
